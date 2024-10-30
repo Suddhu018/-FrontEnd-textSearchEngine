@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-blue-100 via-white via-pink-100 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-b from-blue-200 via-blue-100 via-white via-pink-200 to-pink-100">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&q=80')] opacity-5 bg-fixed bg-center bg-no-repeat bg-cover" />
 
       <div className="relative min-h-screen flex flex-col items-center px-4">
