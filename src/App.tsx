@@ -3,9 +3,10 @@ import {
   Search,
   X,
   Loader2,
-  BarChart3,
-  BookOpen,
   ArrowRight,
+  BarChart3,
+  Clock,
+  BookOpen,
 } from "lucide-react";
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&q=80')] opacity-5 bg-fixed bg-center bg-no-repeat bg-cover" />
 
       <div className="relative min-h-screen flex flex-col items-center px-4">
-        <div className="w-full max-w-4xl pt-20 pb-20">
+        <div className="w-full max-w-6xl pt-20 pb-20">
           {/* Header Section */}
           <div className="text-center space-y-6 mb-16">
             <div className="flex justify-center">
@@ -75,7 +76,7 @@ function App() {
           </div>
 
           {/* Search Section */}
-          <div className="relative z-10 mx-auto max-w-2xl">
+          <div className="relative z-10 mx-auto max-w-2xl mb-12">
             <div
               className={`
               group relative bg-white rounded-2xl transition-all duration-300
@@ -154,7 +155,7 @@ function App() {
           </div>
 
           {/* Popular Searches */}
-          <div className="mt-12 text-center">
+          <div className="text-center mb-16">
             <div className="inline-flex flex-wrap justify-center gap-2 items-center bg-white/80 px-6 py-3 rounded-2xl shadow-sm">
               <span className="text-sm text-gray-500 mr-2">
                 Popular Searches Saved In LRU:
@@ -177,6 +178,7 @@ function App() {
               ))}
             </div>
           </div>
+
           {/* Results and Statistics Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4">
             {/* Results Card */}
@@ -243,10 +245,10 @@ function App() {
                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-gray-600">
-                      Est. Read Time
+                      Est. Server Response Time
                     </span>
                     <span className="text-lg font-semibold text-blue-600">
-                      4 min
+                      1.5 s
                     </span>
                   </div>
                   <div className="w-full bg-blue-100 rounded-full h-2">
@@ -260,7 +262,9 @@ function App() {
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <div className="text-center p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
                     <BookOpen className="w-6 h-6 text-blue-500 mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-gray-900">256</div>
+                    <div className="text-2xl font-bold text-gray-900">
+                      3500(1.2GB)
+                    </div>
                     <div className="text-sm text-gray-600">Total Document</div>
                   </div>
                 </div>
