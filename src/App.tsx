@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Search, X, Loader2, Sparkles, ArrowRight } from "lucide-react";
+import {
+  Search,
+  X,
+  Loader2,
+  BarChart3,
+  BookOpen,
+  ArrowRight,
+} from "lucide-react";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -149,7 +156,9 @@ function App() {
           {/* Popular Searches */}
           <div className="mt-12 text-center">
             <div className="inline-flex flex-wrap justify-center gap-2 items-center bg-white/80 px-6 py-3 rounded-2xl shadow-sm">
-              <span className="text-sm text-gray-500 mr-2">Popular:</span>
+              <span className="text-sm text-gray-500 mr-2">
+                Popular Searches Saved In LRU:
+              </span>
               {[
                 "Artificial Intelligence",
                 "Web Design",
@@ -166,6 +175,96 @@ function App() {
                   {term}
                 </button>
               ))}
+            </div>
+          </div>
+          {/* Results and Statistics Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4">
+            {/* Results Card */}
+            <div className="lg:col-span-2">
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <p className="text-gray-600 leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum. Sed ut perspiciatis unde omnis
+                  iste natus error sit voluptatem accusantium doloremque
+                  laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                  inventore veritatis et quasi architecto beatae vitae dicta
+                  sunt explicabo.
+                </p>
+              </div>
+            </div>
+
+            {/* Statistics Card */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-lg font-semibold text-gray-900 mb-6 flex items-center">
+                <BarChart3 className="w-5 h-5 mr-2 text-blue-500" />
+                Search & Processing Statistics
+              </h3>
+
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-gray-600">
+                      Doc Reading Time
+                    </span>
+                    <span className="text-lg font-semibold text-blue-600">
+                      0.3s
+                    </span>
+                  </div>
+                  <div className="w-full bg-blue-100 rounded-full h-2">
+                    <div
+                      className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
+                      style={{ width: "30%" }}
+                    ></div>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-gray-600">
+                      Processing Time
+                    </span>
+                    <span className="text-lg font-semibold text-blue-600">
+                      0.9s
+                    </span>
+                  </div>
+                  <div className="w-full bg-blue-100 rounded-full h-2">
+                    <div
+                      className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
+                      style={{ width: "45%" }}
+                    ></div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-gray-600">
+                      Est. Read Time
+                    </span>
+                    <span className="text-lg font-semibold text-blue-600">
+                      4 min
+                    </span>
+                  </div>
+                  <div className="w-full bg-blue-100 rounded-full h-2">
+                    <div
+                      className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
+                      style={{ width: "65%" }}
+                    ></div>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <div className="text-center p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
+                    <BookOpen className="w-6 h-6 text-blue-500 mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-gray-900">256</div>
+                    <div className="text-sm text-gray-600">Total Document</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
